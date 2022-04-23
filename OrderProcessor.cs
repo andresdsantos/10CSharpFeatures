@@ -12,7 +12,7 @@ public class OrderProcessor
         ArgumentNullException.ThrowIfNull(order);
         if (OnOrderInitialized?.Invoke(order) == false)
         {
-            throw new Exception($"Couldn't init the order {order.IdNumber}");
+            throw new Exception($"Couldn't init the order number {order.IdNumber}");
         }
     }
    
